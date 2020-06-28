@@ -1,8 +1,8 @@
 {
-	"name": "cat-coding",
-	"description": "Cat Coding - A Webview API Sample",
+	"name": "vega-vscode-extension",
+	"description": "An extension to integrate Vega to VSCode",
 	"version": "0.0.1",
-	"publisher": "vscode-samples",
+	"publisher": "adrijshikhar",
 	"engines": {
 		"vscode": "^1.38.0"
 	},
@@ -16,11 +16,15 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/microsoft/vscode-extension-samples.git"
+		"url": "https://github.com/adrijshikhar/vega-vscode-extension"
 	},
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
+			{
+				"command": "extension.sayHello",
+				"title": "Hello World"
+			},
 			{
 				"command": "catCoding.start",
 				"title": "Start cat coding session",
@@ -30,6 +34,24 @@
 				"command": "catCoding.doRefactor",
 				"title": "Do some refactoring",
 				"category": "Cat Coding"
+			}
+		],
+		"jsonValidation": [
+			{
+				"fileMatch": "*.vg",
+				"url": "http://vega.github.io/vega/vega-schema.json"
+			},
+			{
+				"fileMatch": "*.vg.json",
+				"url": "http://vega.github.io/vega/vega-schema.json"
+			},
+			{
+				"fileMatch": "*.vl",
+				"url": "http://vega.github.io/vega-lite/vega-lite-schema.json"
+			},
+			{
+				"fileMatch": "*.vl.json",
+				"url": "http://vega.github.io/vega-lite/vega-lite-schema.json"
 			}
 		]
 	},
@@ -41,11 +63,11 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "^12.12.0",
-		"@typescript-eslint/eslint-plugin": "^3.0.2",
-		"@typescript-eslint/parser": "^3.0.2",
-		"eslint": "^7.1.0",
-		"typescript": "^3.9.4",
-		"@types/vscode": "^1.38.0"
+		"@types/node": "^12.12.47",
+		"@types/vscode": "^1.46.0",
+		"@typescript-eslint/eslint-plugin": "^3.4.0",
+		"@typescript-eslint/parser": "^3.4.0",
+		"eslint": "^7.3.1",
+		"typescript": "^3.9.5"
 	}
 }
