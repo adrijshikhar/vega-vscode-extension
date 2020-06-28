@@ -23,25 +23,7 @@
       {
         "command": "vegaPanel.compile",
         "title": "Compile vega spec",
-        "category": "Cat Coding"
-      }
-    ],
-    "jsonValidation": [
-      {
-        "fileMatch": "*.vg",
-        "url": "http://vega.github.io/vega/vega-schema.json"
-      },
-      {
-        "fileMatch": "*.vg.json",
-        "url": "http://vega.github.io/vega/vega-schema.json"
-      },
-      {
-        "fileMatch": "*.vl",
-        "url": "http://vega.github.io/vega-lite/vega-lite-schema.json"
-      },
-      {
-        "fileMatch": "*.vl.json",
-        "url": "http://vega.github.io/vega-lite/vega-lite-schema.json"
+        "category": "Vega"
       }
     ]
   },
@@ -63,13 +45,8 @@
     ]
   },
   "dependencies": {
-    "vega-cli": "5.13.0",
-    "vega-datasets": "^1.31.1",
-    "vega-embed": "^6.9.0",
-    "vega-lite": "4.13.1",
-    "vega-schema-url-parser": "^1.1.0",
-    "vega-themes": "^2.8.3",
-    "vega-tooltip": "^0.23.0"
+    "canvas": "^2.6.1",
+    "vega": "^5.13.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.47",
